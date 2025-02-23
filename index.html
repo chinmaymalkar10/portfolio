@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinmay Malkar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- [Previous HTML content remains the same until before closing body tag] -->
+    <header class="header">
+        <nav class="nav-container">
+            <!-- <a href="#" class="logo"><img  src="logo_1.png" width="50"></a> -->
+            
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+                <!-- <li><a href="#" onclick="showPage('contact')">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const header = document.querySelector('.header');
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            header.classList.toggle('menu-active');
+            
+            // Toggle aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                header.classList.remove('menu-active');
+                hamburger.setAttribute('aria-expanded', false);
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                header.classList.remove('menu-active');
+                hamburger.setAttribute('aria-expanded', false);
+            }
+        });
+
+        // Prevent menu from closing when clicking inside
+        navMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+
+    <!-- <div id="home" class="page active">
+        <div class="hero-content">
+            <h1 style="text-align:left;margin-top:70px">Hi, I'm <br><div style="margin-top: -40px"><b style="color:#ff5763">Chinmay Malkar</b></div></h1>
+            <div>
+                <p style="text-align: justify;">I'm a <b style="color:#ff5763">Data Scientist</b> at Jio with over a year of experience in Generative AI and Machine Learning, building scalable AI-driven solutions. I’m passionate about solving complex problems, optimizing AI workflows, and exploring the latest advancements in the field.
+                My expertise includes Python, Gen-AI, Machine Learning, SQL databases, and more, with a strong focus on RAG.</p>
+            </div>
+            
+            
+            <div class="social-links">
+                <a href="mailto:chinmaymalkar10@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/chinmay-malkar-43b573214/"><i class="fab fa-linkedin"></i></a>
+                <a href="tel:+91807105574"><i class="fas fa-phone"></i></a>
+                <a href="https://github.com/chinya31"><i class="fab fa-github"></i></a>
+            </div>
+            
+        </div>
+    </div> -->
+
+    <div id="home" class="page active">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 style="text-align:left;margin-top:70px">Hi, I'm <br>
+                    <div style="margin-top: -40px"><b style="color:#ff5763">Chinmay Malkar</b></div>
+                </h1>
+                <div>
+                    <p style="text-align: justify;">I'm a <b style="color:#ff5763">Data Scientist</b> at Jio with over a year of experience in Generative AI and Machine Learning, building scalable AI-driven solutions. I’m passionate about solving complex problems, optimizing AI workflows, and exploring the latest advancements in the field.
+                    My expertise includes Python, Gen-AI, Machine Learning, SQL databases, and more, with a strong focus on RAG.</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="mailto:chinmaymalkar10@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/chinmay-malkar-43b573214/"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+91807105574"><i class="fas fa-phone"></i></a>
+                    <a href="https://github.com/chinya31"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="photo.png" alt="Chinmay Malkar" style="width: 500px; border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="about" class="page">
+        <div class="about-grid">
+            <div class="about-content">
+                <h2 style="color:#ff5763">About Me</h2>
+                <p style="text-align: justify;">Hey, I’m Chinmay Malkar an Associate Data Scientist with a strong foundation in AI security, adversarial testing, and large-scale data engineering. My journey began with a Bachelor’s in Computer Engineering from Pillai College of Engineering, where I honed my skills in algorithms, machine learning, and scalable systems.</p>
+                <p style="text-align: justify;">At JIO Platforms, I’ve worked on LLM security, developing adversarial testing frameworks, fine-tuning models for robust AI defenses, and building RAG-based chatbots and AI-driven recommendation systems. I also designed high-performance data pipelines handling terabytes of data daily, ensuring efficiency and scalability.</p>
+                <p style="text-align: justify;">Beyond AI, I’m passionate about movies, series, cricket, and stargazing—always curious, always exploring.</p>
+                <p style="text-align: justify;">Let’s connect and build the future of AI together!</p>
+            </div>
+           
+        </div>
+        <br><br>
+        <section class="history-container">
+    
+
+            <!-- Timeline -->
+            <div class="history">
+              <div class="history-line"></div>
+              <div class="history-item highlight" data-slide="0">
+                <div class="history-title">Data Scientist @ Jio Platforms ltd. </div>
+              </div>
+              <!-- <div class="history-item" data-slide="1">
+                <div class="history-title">Web Developer Intern</div>
+              </div> -->
+              <div class="history-item" data-slide="2">
+                <div class="history-title">Education </div>
+              </div>
+            </div>
+        
+            <!-- Content Section -->
+            <div class="details-section">
+              <div class="details highlight-content">
+                <h2>Data Scientist (Nov 2023-present)</h2>
+                <ul style="text-align: justify;">
+
+                    <li style="margin-bottom: 15px;">Developed Prompt Injection Test Suite – Identified critical LLM vulnerabilities with 92% accuracy, enhancing AI security and resilience.</li>
+                    <li style="margin-bottom: 15px;">Fine-tuned Mistral Model – Improved adversarial prompt generation success rate from 30% to 85%, strengthening AI robustness.</li>
+                    <li style="margin-bottom: 15px;">Engineered PII Test Suite – Achieved 89% accuracy in detecting sensitive data exposure, ensuring compliance with privacy regulations.</li>
+                    <li style="margin-bottom: 15px;">Developed RAG-based Chatbot – Increased response accuracy by 40%, enhancing contextual understanding and user interaction.</li>
+                    <li style="margin-bottom: 15px;"><strong>Designed AI-driven Recommendation System</strong> – Improved conversational engagement by 35%, personalizing chatbot follow-up queries.</li>
+                    <li style="margin-bottom: 15px;"><strong>Built High-Volume Data Pipeline</strong> – Processed 6TB+ of data daily using PySpark and Hive, optimizing performance and reducing latency.</li>
+                    <li style="margin-bottom: 15px;"><strong>Automated CI/CD Workflows</strong> – Reduced deployment time by 40%, streamlining data pipeline integration and system performance.</li>
+                    <li style="margin-bottom: 15px;"><strong>Developed PDF Parser with YOLO</strong> – Reduced report analysis time by 50%, improving data extraction efficiency and decision-making speed.</li>
+                
+                </ul>
+                
+              </div>
+              <!-- <div class="details">
+                <h2>Web Developer Intern @ Sahu Technology</h2>
+                <ul>
+                    <li><strong>Web Developer Intern at Sahu Technology</strong> – Developed and enhanced features for a blog application using Django.</li>
+                    <li><strong>Implemented Comment Like Feature</strong> – Added functionality for users to like comments, improving engagement and user interaction.</li>
+                    <li><strong>Collaborated with Development Team</strong> – Assisted in debugging, testing, and refining application features.</li>
+                </ul>
+                
+              </div> -->
+              <div class="details">
+                <h2>Bachelors of Engineering in Computer Science</h2>
+                <ul>
+                    <li>Bachelor of Technology in Computer Engineering from Pillai College of Engineering (2019-2023).</li>
+                    <li>Achieved a CGPA of 9.03, reflecting strong academic performance.</li>
+                    <li>Covered subjects including Applied Data Science, Big Data, Data Structures and Algorithms, Machine Learning, and Database Management Systems.</li>
+                </ul>
+                
+              </div>
+              <div class="details">
+                <h2>Future Aspirations</h2>
+                <ul>
+                  <li>Continue pushing AI boundaries.</li>
+                  <li>Focus on ethical AI and bias reduction.</li>
+                  <li>Improve model efficiency and automation.</li>
+                </ul>
+              </div>
+            </div>
+        
+          </section>
+        
+          <script>
+            const historyItems = document.querySelectorAll('.history-item');
+            const details = document.querySelectorAll('.details');
+        
+            function updateHighlightContent(index) {
+              // Remove highlight class from all
+              historyItems.forEach(item => item.classList.remove('highlight'));
+              details.forEach(content => content.classList.remove('highlight-content'));
+        
+              // Add highlight class to the selected content & marker
+              historyItems[index].classList.add('highlight');
+              details[index].classList.add('highlight-content');
+            }
+        
+            historyItems.forEach((item, index) => {
+              item.addEventListener('click', () => updateHighlightContent(index));
+            });
+        
+          </script>
+    </div>
+
+    <div id="skills" class="page">
+        <div class="skills-container">
+            <h2 style="color: #ff5763;">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>Python, PostgresSQL, PySpark</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>TensorFlow, Scikit Learn, LangChain</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Databases</h3>
+                    <p>Milvus, Hive, SQL</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Visualization</h3>
+                    <p>Seaborn, Matplotlib, Plotly</p>
+                </div>
+                <!-- <div class="skill-card">
+                    <i class="fas fa-light fa-globe"></i>
+                    <h3>Web Development</h3>
+                    <p>Django, Flask, Html, css, Js</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="page">
+        <h2 style="color: #ff5763;margin-left:5rem">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- <div class="project-card">
+        
+                <div class="project-content">
+                    <h3>PII detection</h3>
+                    <p>Fine Tuned a bert model to detect PII in large texts  with 95% accueacr.</p>
+                </div>
+            </div> -->
+            <div class="project-card">
+              
+                <div class="project-content">
+                    <h3>Travel Planner</h3>
+                    <p>Developed a Travel Itinerary web application using the Apriori algorithm for intelligent route suggestions and daily recommendations.</p>
+                </div>
+            </div>
+            <!-- <div class="project-card">
+               
+                <div class="project-content">
+                    <h3>PDF Summarizer</h3>
+                    <p>Created an advanced PDF summarization tool using YOLO models and Llama Vision, reducing review time by 30%.</p>
+                </div>
+            </div> -->
+            <!-- <div class="project-card">
+                
+                <div class="project-content">
+                    <h3>Blog App</h3>
+                    <p>created a Blog app with in depth functionality and RBAC for every user</p>
+                </div>
+            </div> -->
+            <div class="project-card">
+                
+                <div class="project-content">
+                    <h3>Driver Posture Prediction</h3>
+                    <p> Fine Tuned a VGG16 neural network to detect drivers posture while and driving and use the result to alert the driver</p>
+                </div>
+            </div>
+            <div class="project-card">
+                
+                <div class="project-content">
+                    <h3>Road Image Segmentation</h3>
+                    <p> Trained a UNet model to segment vehicles and humans on the road on the camvid dataset achieving 92 percent accuracy over IOU metrics</p>
+                </div>
+            </div>
+            <!-- <div class="project-card">
+               
+                <div class="project-content">
+                    <h3>Place Automation</h3>
+                    <p> A one stop Solution for placement cell of the colleges to monitor the placement activites of the students and also of the job offering companies</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div id="contact" class="page">
+        <h2>Get In Touch</h2>
+        <div class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+        
+            // Show the selected page
+            document.getElementById(pageId).style.display = 'block';
+        }
+        
+        // Handle form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+        });
+        
+        // Initially show only the home section
+        document.addEventListener("DOMContentLoaded", function () {
+            showPage('home'); // Ensure the home page is visible on load
+        });
+        
+        
+    </script>
+    <!-- Add Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Let's Chat!</h3>
+                <button class="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    Hi! I'm Chinmay's portfolio assistant. How can I help you today?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message...">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+     const API_KEY = "AIzaSyBpbylXokHVlsI9OfGcsgN7uZuwnmec98c";
+const GEMINI_URL = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=" + API_KEY;
+
+const chatToggle = document.querySelector('.chat-toggle');
+const chatContainer = document.querySelector('.chat-container');
+const closeChat = document.querySelector('.close-chat');
+const chatInput = document.querySelector('.chat-input input');
+const chatSend = document.querySelector('.chat-input button');
+const chatMessages = document.querySelector('.chat-messages');
+
+chatToggle.addEventListener('click', () => {
+    chatContainer.style.display = 'flex';
+    chatToggle.style.display = 'none';
+});
+
+closeChat.addEventListener('click', () => {
+    chatContainer.style.display = 'none';
+    chatToggle.style.display = 'flex';
+});
+
+chatSend.addEventListener('click', sendMessage);
+chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+});
+
+async function sendMessage() {
+    const message = chatInput.value.trim();
+    if (!message) return;
+
+    addMessage('user', message);
+    chatInput.value = '';
+    
+    const SYSTEM_PROMPT = `<system_prompt>
+YOU ARE A PERSONAL AI REPRESENTATIVE FOR **CHINMAY MALKAR**, AN ASSOCIATE DATA SCIENTIST CURRENTLY WORKING AT JIO PLATFORMS LTD. YOUR PURPOSE IS TO PROVIDE INFORMATION STRICTLY RELATED TO CHINMAY MALKAR'S PROFESSIONAL BACKGROUND, SKILLS, EDUCATION, AND PROJECTS. ANY UNRELATED QUESTION MUST BE DENIED SARCASTICALLY, BUT NOT WITH FIXED RESPONSES—INSTEAD, VARY YOUR REPLIES BASED ON CONTEXT.
+DO NOT LIE OR MENTION ANY OTHER ACHIEVEMENTS THAN THE ONES GIVEN BELOW.
+
+### GREETINGS PROTOCOL
+- ALWAYS respond to greetings in a friendly and engaging manner.
+
+### CHINMAY MALKAR - PROFESSIONAL SUMMARY
+Chinmay Malkar is an **Associate Data Scientist at Jio Platforms Ltd.**, specializing in AI security, data science, and automation. He has successfully led multiple projects improving AI safety, efficiency, and reliability.
+
+### CONTACT INFORMATION
+- **Phone:** +91 8097105574
+- **Email:** chinmaymalkar10@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/chinmay-malkar-43b573214/
+- **GitHub:** https://github.com/chinya31
+- **LeetCode:** https://leetcode.com/u/chinya31/
+
+### EXPERIENCE & PROJECTS
+- **Prompt Injection Test Suite**: Achieved 92% accuracy in detecting adversarial vulnerabilities in LLM applications.
+- **Adversarial Prompt Generation**: Fine-tuned the Mistral model to improve adversarial response generation from 30% to 85%.
+- **PII Test Suite**: Ensured compliance by detecting sensitive data exposure with 89% accuracy.
+- **RAG Chatbot**: Integrated retrieval-based AI, increasing response accuracy by 40%.
+- **AI-driven Recommendation System**: Boosted conversational engagement by 35% through personalized follow-up questions.
+- **PDF Parser**: Used fine-tuned YOLO models to enhance extraction accuracy by 30% and reduce redundancy by 50%.
+- **Big Data Pipeline**: Processed 6+ TB of data daily, optimizing scalability and reducing latency.
+- **CI/CD Automation for Data Pipelines**: Decreased deployment times by 40%, ensuring smooth integration.
+- **Driver Posture Prediction**: Achieved 93% accuracy in identifying unsafe driving behaviors.
+- **Tour Planner**: Used the Apriori algorithm to improve travel recommendation accuracy by 40% and optimize itineraries.
+
+### EDUCATION
+- **B.E. in Computer Engineering** | Pillai College of Engineering | **CGPA: 9.03 (2019-2023)**
+
+### TECHNICAL SKILLS
+- **Programming:** Python
+- **Databases:** SQL, Milvus
+- **Data Science:** Machine Learning, Deep Learning, Gen AI, RAG, LangChain, Scikit Learn
+- **Big Data & Cloud:** PySpark, Hive
+- **Web Frameworks:** FastAPI
+- **Tools:** Pandas, NumPy, Git
+
+### STRICT RULES FOR RESPONDING:
+1. **Always respond to greetings naturally and appropriately.**
+2. **ONLY** answer questions related to Chinmay Malkar’s professional details, projects, skills, or education.
+3. **If asked an unrelated question, craft a unique sarcastic denial based on context, rather than repeating fixed phrases.** Examples:
+   - If someone asks about politics: _"Chinmay’s too busy debugging AI models to debug politicians."_
+   - If asked about cooking: _"He can fine-tune a neural network, but fine-tuning spices? That’s another challenge."_
+4. **KEEP RESPONSES MINIMAL**—no unnecessary elaboration.
+</system_prompt>
+`;
+    
+  const requestBody = {
+        contents: [{ parts: [{ text: `${SYSTEM_PROMPT}\n\nUser Query: ${message}` }] }]
+    };
+    
+    try {
+        const response = await fetch(GEMINI_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                 "Referer": "https://robinsajan.github.io/portfolio/"
+
+            },
+            body: JSON.stringify(requestBody)
+        });
+        
+        const data = await response.json();
+        console.log("Gemini Response:", data);
+        
+        if (data && data.candidates && data.candidates.length > 0) {
+            addMessage('bot', data.candidates[0].content.parts[0].text);
+        } else {
+            addMessage('bot', "No valid response received.");
+        }
+    } catch (error) {
+        console.error("Error fetching response:", error);
+        addMessage('bot', "Error fetching response. Please try again.");
+    }
+}
+
+function addMessage(type, content) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('message', type);
+    messageDiv.textContent = content;
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+</script>
+</body>
+</html>
