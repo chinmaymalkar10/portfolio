@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinmay Malkar - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -71,31 +71,74 @@
         });
     </script>
 
-    <!-- <div id="home" class="page active">
-        <div class="hero-content">
-            <h1 style="text-align:left;margin-top:70px">Hi, I'm <br><div style="margin-top: -40px"><b style="color:#ff5763">Chinmay Malkar</b></div></h1>
-            <div>
-                <p style="text-align: justify;">I'm a <b style="color:#ff5763">Data Scientist</b> at Jio with over a year of experience in Generative AI and Machine Learning, building scalable AI-driven solutions. I’m passionate about solving complex problems, optimizing AI workflows, and exploring the latest advancements in the field.
-                My expertise includes Python, Gen-AI, Machine Learning, SQL databases, and more, with a strong focus on RAG.</p>
-            </div>
-            
-            
-            <div class="social-links">
-                <a href="mailto:chinmaymalkar10@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/chinmay-malkar-43b573214/"><i class="fab fa-linkedin"></i></a>
-                <a href="tel:+91807105574"><i class="fas fa-phone"></i></a>
-                <a href="https://github.com/chinya31"><i class="fab fa-github"></i></a>
-            </div>
-            
-        </div>
-    </div> -->
-
     <div id="home" class="page active">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 style="text-align:left;margin-top:70px">Hi, I'm <br>
+                <!-- <h1 style="text-align:left;margin-top:70px">Hi, I'm <br>
                     <div style="margin-top: -40px"><b style="color:#ff5763">Chinmay Malkar</b></div>
-                </h1>
+                </h1> -->
+                <!-- <div class="header-container">
+                    <h1>Hi, I'm</h1>
+                    <h1 class="name">Chinmay Malkar</h1>
+                  </div>
+                  
+                  <style>
+                    .header-container {
+                      margin-top: 4rem;
+                      text-align: left;
+                      margin-bottom: 2.5rem; /* Added margin below the header container */
+                    }
+                    
+                    .name {
+                      color: #ff5763;
+                      font-weight: bold;
+                      margin-top: -0.5rem; /* Small negative margin to bring the name closer */
+                      line-height: 1; /* Tighter line height */
+                    }
+                  </style> -->
+
+                  <div class="header-container">
+                    <h1>Hi, I'm</h1>
+                    <h1 class="name">Chinmay Malkar</h1>
+                  </div>
+                  
+                  <!-- <style>
+                    .header-container {
+                      margin-top: 4rem;
+                      text-align: left;
+                      margin-bottom: 2.5rem;
+                      padding: 0rem; /* Add padding for better spacing on small screens */
+                    }
+                  
+                    .name {
+                      color: #ff5763;
+                      font-weight: bold;
+                      margin-top: -0.5rem;
+                      line-height: 1;
+                    }
+                  
+                    /* Responsive styling */
+                    @media screen and (max-width: 768px) {
+                      .header-container {
+                        text-align: left; /* Center text on smaller screens */
+                        margin-top: 0rem;
+                        margin-bottom: 0rem;
+                      }
+                  
+                      .name {
+                        font-size: 1.8rem; /* Adjust font size for better readability */
+                        margin-top: 0; /* Reset margin for better spacing */
+                      }
+                  
+                      h1 {
+                        font-size: 1.5rem; /* Reduce heading size for smaller screens */
+                      }
+                      
+                    }
+                  </style> -->
+                  
+
+
                 <div>
                     <p style="text-align: justify;">I'm a <b style="color:#ff5763">Data Scientist</b> at Jio with over a year of experience in Generative AI and Machine Learning, building scalable AI-driven solutions. I’m passionate about solving complex problems, optimizing AI workflows, and exploring the latest advancements in the field.
                     My expertise includes Python, Gen-AI, Machine Learning, SQL databases, and more, with a strong focus on RAG.</p>
@@ -247,57 +290,31 @@
     </div>
 
     <div id="projects" class="page">
-        <h2 style="color: #ff5763;margin-left:5rem">Featured Projects</h2>
-        <div class="projects-grid">
-            <!-- <div class="project-card">
-        
-                <div class="project-content">
-                    <h3>PII detection</h3>
-                    <p>Fine Tuned a bert model to detect PII in large texts  with 95% accueacr.</p>
+        <div class="projects-container">
+            <h2 style="color: #ff5763;margin-left:5rem">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                
+                    <div class="project-content">
+                        <h3>Travel Planner</h3>
+                        <p>Developed a Travel Itinerary web application using the Apriori algorithm for intelligent route suggestions and daily recommendations.</p>
+                    </div>
                 </div>
-            </div> -->
-            <div class="project-card">
-              
-                <div class="project-content">
-                    <h3>Travel Planner</h3>
-                    <p>Developed a Travel Itinerary web application using the Apriori algorithm for intelligent route suggestions and daily recommendations.</p>
+                <div class="project-card">
+                    
+                    <div class="project-content">
+                        <h3>Driver Posture Prediction</h3>
+                        <p> Fine Tuned a VGG16 neural network to detect drivers posture while and driving and use the result to alert the driver</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    
+                    <div class="project-content">
+                        <h3>Road Image Segmentation</h3>
+                        <p> Trained a UNet model to segment vehicles and humans on the road on the camvid dataset achieving 92 percent accuracy over IOU metrics</p>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="project-card">
-               
-                <div class="project-content">
-                    <h3>PDF Summarizer</h3>
-                    <p>Created an advanced PDF summarization tool using YOLO models and Llama Vision, reducing review time by 30%.</p>
-                </div>
-            </div> -->
-            <!-- <div class="project-card">
-                
-                <div class="project-content">
-                    <h3>Blog App</h3>
-                    <p>created a Blog app with in depth functionality and RBAC for every user</p>
-                </div>
-            </div> -->
-            <div class="project-card">
-                
-                <div class="project-content">
-                    <h3>Driver Posture Prediction</h3>
-                    <p> Fine Tuned a VGG16 neural network to detect drivers posture while and driving and use the result to alert the driver</p>
-                </div>
-            </div>
-            <div class="project-card">
-                
-                <div class="project-content">
-                    <h3>Road Image Segmentation</h3>
-                    <p> Trained a UNet model to segment vehicles and humans on the road on the camvid dataset achieving 92 percent accuracy over IOU metrics</p>
-                </div>
-            </div>
-            <!-- <div class="project-card">
-               
-                <div class="project-content">
-                    <h3>Place Automation</h3>
-                    <p> A one stop Solution for placement cell of the colleges to monitor the placement activites of the students and also of the job offering companies</p>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -366,8 +383,8 @@
     </div>
     <script>
 
-     const API_KEY = "AIzaSyBpbylXokHVlsI9OfGcsgN7uZuwnmec98c";
-const GEMINI_URL = "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=" + API_KEY;
+     const API_KEY = "AIzaSyBobQ1LjqzPGLIYcIbg-BN_Fa0xeQioIAg";
+const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + API_KEY;
 
 const chatToggle = document.querySelector('.chat-toggle');
 const chatContainer = document.querySelector('.chat-container');
