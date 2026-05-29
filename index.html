@@ -321,7 +321,7 @@
 
     <script>
 
-     const API_KEY = "AIzaSyC-8FgGqwIwA62jAdjW47LB7mjxXgOVApo";
+     const API_KEY = import.meta.env.API_KEY;;
 const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=" + API_KEY;
 
 const chatToggle = document.querySelector('.chat-toggle');
